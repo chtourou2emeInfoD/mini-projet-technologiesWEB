@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "training-app-A"
+    }
+  },
+  "defaultProject": "training-app-A",
+  "cli": {
+    "analytics": false
+  }
 }
