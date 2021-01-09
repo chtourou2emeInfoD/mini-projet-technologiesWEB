@@ -6,8 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Hello, Its My first Angular App';
-  name ='walid saad';
-  session_name = "Formation NodeJS";
-
+  title = 'training-app-D';
+  name = "Walid SAAD";
+  //session_name = "Formation Mobile";
+  nbpart: number=0;
+  firstSession= {
+    id: 1,
+    name: 'Formation Angular',
+    track: 'MEAN Stack',
+    date: new Date('2020-11-19'),
+    duree: 3,
+    local: 'Tunis',
+    participants: 0
+  }
+  nbrParticipantsChange (event)
+  {
+   this.nbpart = event.value;
+  }
 }
