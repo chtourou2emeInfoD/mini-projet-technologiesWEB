@@ -1,33 +1,33 @@
 :host {
     display: flex;
-    min-height: 90vh;
+    min-height: 100%;
     flex-direction: column;
-    padding: 10px;
-    }
-    header {
+    background-color: #32435b;
+}
+header {
     color: #ffffff;
     padding: 10px;
-    }
-    header > h1 {
+}
+header > h1 {
     font-size: 2em;
-    }
-    header .description {
+}
+header .description {
     font-style: italic;
-    }
-    section {
+}
+section {
     flex: 1;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    }
-    section > app-session-item {
+}
+section > app-session-item {
     margin: 10px;
-    }
-    footer {
+}
+footer {
     text-align: right;
-    }
-    footer .icon {
+}
+footer .icon {
     width: 64px;
     height: 64px;
     margin: 15px;
-    }
+}

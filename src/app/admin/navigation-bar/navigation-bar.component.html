@@ -1,0 +1,49 @@
+<div class="navbar">
+  <div class="brand">
+    <img src="assets/brand.jpg" alt="">
+    <h3>Espace Admin</h3>
+  </div>
+  <div class="search">
+    <img src="assets/chercher.png" alt="">
+    <input type="text" name="" placeholder="Chercher Session" style="height:30px;margin: 7px 5px;">
+  </div>
+  <div class="menu">
+    <ul>
+      <li>
+        <a routerLink=".">
+          <img src="assets/dashboard.png" alt=""><h3>Dashboard</h3>
+        </a>
+      </li>
+      <hr>
+      <li>
+        <a routerLink='./sessions' routerLinkActive="active">
+          <img src="assets/sessions.png" alt=""><h3>Sessions</h3>
+        </a>
+      </li>
+      <hr>
+      <li>
+        <a href="#">
+          <img src="assets/formateurs.png" alt=""><h3>Formateurs</h3>
+        </a>
+      </li>
+      <hr>
+      <li>
+        <a href="#">
+          <img src="assets/participants.png" alt=""><h3>Participants</h3>
+        </a>
+      </li>
+      <hr>
+    </ul>
+  </div>
+</div>
+<div class="horizantal_root">
+  <div class="horizantal">
+    <div class="disconnect">
+      <h3>Date & Adresse</h3>
+      <a routerLink="/list"><img src="assets/disconnect.png" style="width: 40px;height:40px;"></a>
+    </div>
+  </div>
+  <div class="root">
+    <router-outlet></router-outlet>
+  </div>
+</div>

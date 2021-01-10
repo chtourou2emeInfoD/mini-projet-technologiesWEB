@@ -8,23 +8,41 @@ import { SessionEditFormComponent } from './session-edit-form/session-edit-form.
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 const adminRoutes: Routes = [
   {
-  path: '',
-  component: AdminComponent,
-  children: [{ path: 'add', component: SessionAddFormComponent },
-  { path: 'edit/:id', component:
-  SessionEditFormComponent },
-  { path: 'list', component: SessionItemListComponent
-  },
-  { path: '', redirectTo: 'list', pathMatch: 'full' }
-  ],
+    path: '',
+    component: NavigationBarComponent,
+    children: [
+     {
+       path: 'sessions',
+       component: AdminComponent,
+       children: [
+        {
+          path: 'add', 
+          component: SessionAddFormComponent
+        },
+        {
+          path: 'edit/:id', 
+          component: SessionEditFormComponent
+        },
+        {
+          path: 'list', component: SessionItemListComponent
+        },
+        { 
+          path: '',
+          redirectTo: 'list', 
+          pathMatch: 'full' 
+        }
+       ]
+     }
+    ],
   }
-  ];
+];
 
 @NgModule({
-  declarations: [AdminComponent, SessionItemComponent, SessionItemListComponent, SessionAddFormComponent, SessionEditFormComponent],
+  declarations: [AdminComponent, SessionItemComponent, SessionItemListComponent, SessionAddFormComponent, SessionEditFormComponent, NavigationBarComponent],
   imports: [RouterModule.forChild(adminRoutes),
     CommonModule,
     FormsModule

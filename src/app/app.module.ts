@@ -9,15 +9,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const appRoutes: Routes = [
   {
-  path: 'list',
-  component: SessionItemListComponent},
+    path: 'list',
+    component: SessionItemListComponent
+  },
   {
-  path: 'admin',
-  loadChildren: './admin/admin.module#AdminModule'
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
   },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent }
-  ];
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(
     appRoutes,
     { enableTracing: true }
-    ),
+  ),
     BrowserModule
   ],
   providers: [],
