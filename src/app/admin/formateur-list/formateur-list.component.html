@@ -1,0 +1,62 @@
+<div class="crudTable" [ngClass]="{disabled: modifierClicked}">
+    <a routerLink="."><img src="assets/actualiser.png" alt="" style="width:50px;height:50px;margin-right:10px;"></a>
+    <button (click)="onAdd()"><img src="assets/ajouter.png" alt="" style="width:50px;height:50px;"></button>
+    <table>
+        <tr>
+            <th colspan="6" style="background-color:#4473c4;height:35px;color:#fff">Liste des formateurs</th>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Adresse</th>
+            <th>Email</th>
+            <th>Domaine d'expertise</th>
+            <th>Modifier/Supp</th>
+        </tr>
+        <tr *ngFor="let formateur of formateurs" [formateur]="formateur">
+            <td>{{ formateur.nom }}</td>
+            <td>{{ formateur.prenom }}</td>
+            <td>{{ formateur.adresse }}</td>
+            <td>{{ formateur.email }}</td>
+            <td>{{ formateur.expertise }}</td>
+            <td>
+                <button (click)="onModifyClicked(formateur)">
+                    <img src="assets/modifer.png" alt="">
+                </button>
+                <button (click)="onDelete(formateur)">
+                    <img src="assets/supprimer.png" alt="" style="width:45px;">
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="updateElement" [ngClass]="{showUpdateElement: !modifierClicked }">
+        <form (submit)="onSubmit(tempFormateur)">
+            <ul>
+                <li>
+                    <h3>Nom</h3>
+                    <input type="text" name="nom" [(ngModel)]="tempFormateur.nom">
+                </li>
+                <li>
+                    <h3>Prénom</h3>
+                    <input type="text" name="prenom" [(ngModel)]="tempFormateur.prenom">
+                </li>
+                <li>
+                    <h3>Adresse</h3>
+                    <input type="text" name="adresse" [(ngModel)]="tempFormateur.adresse">
+                </li>
+                <li>
+                    <h3>Email</h3>
+                    <input type="text" name="email" [(ngModel)]="tempFormateur.email">
+                </li>
+                <li>
+                    <h3>Domaine d'expertise</h3>
+                    <input type="text" name="expertise" [(ngModel)]="tempFormateur.expertise">
+                </li>
+                <li style="display:block;text-align:center;margin:30px;">
+                    <button type="submit">Soumettre</button>
+                    <button type="button" (click)="onAnnuler()">Annuler</button>
+                </li>
+            </ul>
+        </form>
+    </div>

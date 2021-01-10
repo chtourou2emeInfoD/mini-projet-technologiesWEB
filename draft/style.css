@@ -1,0 +1,92 @@
+.crudTable{
+  position: absolute;
+  width: 100%;
+  right: 10%;
+  left: 10%;
+
+}
+
+table {
+  width: 80%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  transition: 0.2s;
+}
+
+tr,td{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 2px;
+  text-align: center;
+}
+
+tr:nth-child(2){
+    background-color: #4473c4 !important;
+    color:#fff;
+}
+
+tr:nth-child(odd){
+  background-color: #e9ebf5;
+}
+
+tr:nth-child(even) {
+  background-color: #cfd5ea;
+}
+
+td{
+  height: 40px;
+}
+
+td a img{
+  width: 35px;
+  height: 35px;
+  margin: 2px;
+}
+
+td a{
+  text-decoration: none;
+}
+
+.updateElement{
+  position: absolute;
+  width:46%;
+  height: 220px;
+  top: 40%;
+  bottom: 40%;
+  left: 35%;
+  right: 35%;
+  z-index: 100;
+  box-shadow: 0px 0px 15px 0px #484848;
+  background-color: #32435b;
+  color: #fff;
+  border-radius: 5px;
+  display: none;
+}
+
+.updateElement ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.updateElement ul li{
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  margin: 10px;
+}
+
+.updateElement ul li h3{
+  margin: 0 5px;
+  min-width: 190px;
+}
+
+li button{
+  background-color: #45bf94;
+  border: 0;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}

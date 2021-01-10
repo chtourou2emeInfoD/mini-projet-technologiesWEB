@@ -3,6 +3,7 @@
     min-height: 100%;
     flex-direction: column;
     background-color: #32435b;
+    border-radius: 2px;
 }
 header {
     color: #ffffff;
