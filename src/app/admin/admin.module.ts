@@ -9,7 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { ParticipantComponent } from './participant/participant.component';
+import { ParticipantListComponent } from './participant-list/participant-list.component';
 import { FormateurListComponent } from './formateur-list/formateur-list.component';
 
 const adminRoutes: Routes = [
@@ -42,13 +42,17 @@ const adminRoutes: Routes = [
       {
         path: 'formateurs',
         component: FormateurListComponent
+      },
+      {
+        path: 'participants',
+        component: ParticipantListComponent
       }
     ]
   },
 ];
 
 @NgModule({
-  declarations: [AdminComponent, SessionItemComponent, SessionItemListComponent, SessionAddFormComponent, SessionEditFormComponent, NavigationBarComponent, ParticipantComponent, FormateurListComponent],
+  declarations: [AdminComponent, SessionItemComponent, SessionItemListComponent, SessionAddFormComponent, SessionEditFormComponent, NavigationBarComponent, ParticipantListComponent, FormateurListComponent],
   imports: [RouterModule.forChild(adminRoutes),
     CommonModule,
     FormsModule

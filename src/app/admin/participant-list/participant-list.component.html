@@ -1,0 +1,68 @@
+<div class="crudTable" [ngClass]="{disabled: modifierClicked}">
+    <a routerLink="."><img src="assets/actualiser.png" alt="" style="width:50px;height:50px;margin-right:10px;"></a>
+    <button (click)="onAdd()"><img src="assets/ajouter.png" alt="" style="width:50px;height:50px;"></button>
+    <table>
+        <tr>
+            <th colspan="7" style="background-color:#4473c4;height:35px;color:#fff">Liste des participants</th>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Adresse</th>
+            <th>Email</th>
+            <th>Société</th>
+            <th>Poste</th>
+            <th>Modifier/Supp</th>
+        </tr>
+        <tr *ngFor="let participant of participants" [participant]="participant">
+            <td>{{ participant.nom }}</td>
+            <td>{{ participant.prenom }}</td>
+            <td>{{ participant.adresse }}</td>
+            <td>{{ participant.email }}</td>
+            <td>{{ participant.societe }}</td>
+            <td>{{ participant.poste }}</td>
+            <td>
+                <button (click)="onModifyClicked(participant)">
+                    <img src="assets/modifer.png" alt="">
+                </button>
+                <button (click)="onDelete(participant)">
+                    <img src="assets/supprimer.png" alt="" style="width:45px;">
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="updateElement2" [ngClass]="{showUpdateElement: !modifierClicked }">
+        <form (submit)="onSubmit(tempparticipant)">
+            <ul>
+                <li>
+                    <h3>Nom</h3>
+                    <input type="text" name="nom" [(ngModel)]="tempparticipant.nom">
+                </li>
+                <li>
+                    <h3>Prénom</h3>
+                    <input type="text" name="prenom" [(ngModel)]="tempparticipant.prenom">
+                </li>
+                <li>
+                    <h3>Adresse</h3>
+                    <input type="text" name="adresse" [(ngModel)]="tempparticipant.adresse">
+                </li>
+                <li>
+                    <h3>Email</h3>
+                    <input type="text" name="email" [(ngModel)]="tempparticipant.email">
+                </li>
+                <li>
+                    <h3>Societe</h3>
+                    <input type="text" name="societe" [(ngModel)]="tempparticipant.societe">
+                </li>
+                <li>
+                    <h3>Poste</h3>
+                    <input type="text" name="poste" [(ngModel)]="tempparticipant.poste">
+                </li>
+                <li style="display:block;text-align:center;margin:30px;">
+                    <button type="submit">Soumettre</button>
+                    <button type="button" (click)="onAnnuler()">Annuler</button>
+                </li>
+            </ul>
+        </form>
+    </div>
