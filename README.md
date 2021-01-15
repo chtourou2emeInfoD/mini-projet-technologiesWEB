@@ -28,6 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Developer
 
-This code is devoloped by Khaldoun CHTOUROU during the "TP" sessions and mini project  
+This project is devoloped by Khaldoun CHTOUROU during the "TP" sessions and mini project  
 at National School of Engineers of Carthage(ENICARthage) 2020-2021 and supervised by  
 Mr Walid SAAD, a Cloud and Modern IT Consultant, Assistant Professor; PhD in Computer Science.  
