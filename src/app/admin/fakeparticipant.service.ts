@@ -23,4 +23,11 @@ export class FakeparticipantService {
   getparticipant(id: number) {
     return PARTICIPANTS[id - 1];
   }
+
+  indexOf(participant){
+    for(let i = 0; i<PARTICIPANTS.length; i++)
+      if(PARTICIPANTS[i].id == participant.id)
+        return i;
+    return -1;
+  }
 }

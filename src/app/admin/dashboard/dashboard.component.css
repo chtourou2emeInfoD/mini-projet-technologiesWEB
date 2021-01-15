@@ -17,3 +17,44 @@ ul li{
     margin: 0 5px;
     display: table-cell;
 }
+
+table {
+    width: 40%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    transition: 0.2s;
+}
+
+tr,td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 2px;
+    text-align: center;
+}
+
+tr:nth-child(1){
+    border-bottom: 4px solid #fff;
+    background-color: #4473c4 !important;
+    color:#fff;
+}
+
+tr:nth-child(1) th{
+    padding: 5px;
+}
+
+tr:nth-child(odd){
+    background-color: #e9ebf5;
+}
+
+tr:nth-child(even) {
+    background-color: #cfd5ea;
+}
+
+tr td, tr th{
+    border: 2px solid #fff;
+    font-size: 0.9em;
+}
+
+td{
+    height: 40px;
+}

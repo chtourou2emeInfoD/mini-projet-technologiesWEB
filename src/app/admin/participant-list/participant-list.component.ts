@@ -38,7 +38,8 @@ export class ParticipantListComponent implements OnInit {
  
    onSubmit(participant : Participant){
      this.modifierClicked = !this.modifierClicked;
-     let temp = this.participants[this.tempparticipant.id-1];
+     let index = this.participantService.indexOf(this.tempparticipant);
+     let temp = this.participants[index];
      temp.nom = this.tempparticipant.nom;
      temp.prenom = this.tempparticipant.prenom;
      temp.adresse = this.tempparticipant.adresse;

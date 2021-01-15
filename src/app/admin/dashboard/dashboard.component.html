@@ -1,7 +1,49 @@
-<div class="card-container">
-    <ul>
-        <li><app-dashboard-card [background_color]="'#ed7c31'" [info]="'Sessions'" [nbr]="nbrSessions" [imgSrc]="'assets/sessions.png'"></app-dashboard-card><li>
-        <li><app-dashboard-card [background_color]="'#00b04f'" [info]="'Participants'" [nbr]="nbrParticipants" [imgSrc]="'assets/participants.png'"></app-dashboard-card><li>
-        <li><app-dashboard-card [background_color]="'#7030a0'" [info]="'Formateurs'" [nbr]="nbrFromateurs" [imgSrc]="'assets/formateurs.png'"></app-dashboard-card><li>
-    </ul>
+<div>
+    <div class="card-container">
+        <ul>
+            <li><app-dashboard-card [background_color]="'#ed7c31'" [info]="'Sessions'" [nbr]="nbrSessions" [imgSrc]="'assets/sessions.png'"></app-dashboard-card><li>
+            <li><app-dashboard-card [background_color]="'#00b04f'" [info]="'Participants'" [nbr]="nbrParticipants" [imgSrc]="'assets/participants.png'"></app-dashboard-card><li>
+            <li><app-dashboard-card [background_color]="'#7030a0'" [info]="'Formateurs'" [nbr]="nbrFromateurs" [imgSrc]="'assets/formateurs.png'"></app-dashboard-card><li>
+        </ul>
+    </div>
+     <div class="table_container" style="display:flex;justify-content:space-evenly;margin-top:10px">
+        <table>
+            <tr>
+                <th>Track</th>
+                <th>Nombre de sessions</th>
+            </tr>
+            <tr>
+                <td>MEAN Stack</td>
+                <td [textContent]="getTrackCount('MEAN Stack')"></td>
+            </tr>
+            <tr>
+                <td>Android</td>
+                <td [textContent]="getTrackCount('Android')">2</td>
+            </tr>
+            <tr>
+                <td>Ionic</td>
+                <td [textContent]="getTrackCount('Ionic')">2</td>
+            </tr>
+            <tr>
+                <td>Angular</td>
+                <td [textContent]="getTrackCount('Angular')">2</td>
+            </tr>
+            <tr>
+                <td>NodeJS</td>
+                <td [textContent]="getTrackCount('NodeJS')">2</td>
+            </tr>
+            <tr>
+                <td>Xamarin</td>
+                <td [textContent]="getTrackCount('Xamarin')">2</td>
+            </tr>
+        </table>
+        <table style="width:25%;">
+            <tr>
+                <th>Top formateurs</th>
+            </tr>
+            <tr *ngFor="let formateur of getTopFormateurs()" [formateur]="formateur">
+                <td>{{ formateur.nom + " " +  formateur.prenom}}</td>
+            </tr>
+        </table>
+     </div>
 </div>

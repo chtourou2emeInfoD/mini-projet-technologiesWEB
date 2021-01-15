@@ -23,4 +23,11 @@ export class FakeformateurService {
   getFormateur(id: number) {
     return FORMATEURS[id - 1];
   }
+
+  indexOf(formateur){
+    for(let i = 0; i<FORMATEURS.length; i++)
+      if(FORMATEURS[i].id == formateur.id)
+        return i;
+    return -1;
+  }
 }

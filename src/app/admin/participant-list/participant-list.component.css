@@ -58,7 +58,7 @@
   }
   
   .updateElement2{
-    position: absolute;
+    position: fixed;
     width:70vh;
     height: 290px;
     top: 40%;

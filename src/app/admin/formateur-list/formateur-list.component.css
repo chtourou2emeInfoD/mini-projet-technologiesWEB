@@ -58,7 +58,7 @@ td a{
 }
 
 .updateElement{
-  position: absolute;
+  position: fixed;
   width:70vh;
   height: 260px;
   top: 40%;

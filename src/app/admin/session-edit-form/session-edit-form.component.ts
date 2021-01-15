@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FakesessionitemService } from '../fakesessionitem.service';
-import { Session } from '../session';
 
 @Component({
   selector: 'app-session-edit-form',
@@ -12,7 +11,7 @@ export class SessionEditFormComponent implements OnInit {
   id;
   private sub: any;
   session: any;
-  tracks = ['MEAN', 'Angular',
+  tracks = ['MEAN Stack', 'Angular',
     'NodeJS', 'Android', 'Swift', 'Xamarin'];
   constructor(private route: ActivatedRoute, private sessionItemService: FakesessionitemService) { }
   ngOnInit() {

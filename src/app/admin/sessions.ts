@@ -3,7 +3,7 @@ export const SESSIONITEMS: Session[] = [
     {
         id: 1,
         name: 'Web',
-        track: 'MEAN',
+        track: 'MEAN Stack',
         date: new Date('2018-06-13'),
         duree: 3,
         adress: 'Lyon',

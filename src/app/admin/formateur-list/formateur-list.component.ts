@@ -37,7 +37,8 @@ export class FormateurListComponent implements OnInit {
 
   onSubmit(formateur : Formateur){
     this.modifierClicked = !this.modifierClicked;
-    let temp = this.formateurs[this.tempFormateur.id-1];
+    let index = this.formateurService.indexOf(this.tempFormateur);
+    let temp = this.formateurs[index];
     temp.nom = this.tempFormateur.nom;
     temp.prenom = this.tempFormateur.prenom;
     temp.adresse = this.tempFormateur.adresse;
