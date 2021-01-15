@@ -1,0 +1,36 @@
+.card{
+  background-color: #ed7c31;
+  display: table;
+  color: #fff;
+  padding: 20px;
+}
+
+.card img{
+  width:150px;
+  height: 150px;
+}
+
+.info h3{
+  margin: 0;
+  font-size: 35px;
+}
+
+.info p{
+  margin: 0;
+  font-size: 25px;
+}
+
+.info{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+}
+
+ul li{
+  margin: 0 5px;
+}

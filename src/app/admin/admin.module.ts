@@ -11,6 +11,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ParticipantListComponent } from './participant-list/participant-list.component';
 import { FormateurListComponent } from './formateur-list/formateur-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardCardComponent } from './dashboard-card/dashboard-card.component';
 
 const adminRoutes: Routes = [
   {
@@ -46,13 +48,22 @@ const adminRoutes: Routes = [
       {
         path: 'participants',
         component: ParticipantListComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full' 
       }
     ]
   },
 ];
 
 @NgModule({
-  declarations: [AdminComponent, SessionItemComponent, SessionItemListComponent, SessionAddFormComponent, SessionEditFormComponent, NavigationBarComponent, ParticipantListComponent, FormateurListComponent],
+  declarations: [AdminComponent, SessionItemComponent, SessionItemListComponent, SessionAddFormComponent, SessionEditFormComponent, NavigationBarComponent, ParticipantListComponent, FormateurListComponent, DashboardComponent, DashboardCardComponent],
   imports: [RouterModule.forChild(adminRoutes),
     CommonModule,
     FormsModule

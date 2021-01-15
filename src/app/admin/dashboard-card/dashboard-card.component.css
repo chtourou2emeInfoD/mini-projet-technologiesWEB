@@ -1,0 +1,26 @@
+.card{
+    display: table;
+    color: #fff;
+    padding: 10px;
+}
+
+.card img{
+    width:150px;
+    height: 150px;
+}
+
+.info h3{
+    margin: 0;
+    font-size: 35px;
+}
+
+.info p{
+    margin: 0;
+    font-size: 25px;
+}
+
+.info{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
